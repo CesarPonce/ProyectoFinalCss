@@ -1,0 +1,157 @@
+html,body{
+  margin:0;
+  padding:0;
+  background-color: black;
+  font-family:'Dancing Script';
+  color: white;
+  text-align: center;
+}
+.contenido {
+	width:900px;
+	border-radius: 25px;
+	margin:auto;
+	animation: slideIn 3s;
+}
+
+header {
+	background-color: #5b7989;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: row;
+	height: 100px;
+	/* justify-content:space-between; */
+	align-items:center;
+}
+
+header .logo {
+	color:#fff;
+	font-size:30px;
+	padding-left: 20px;
+	width: 50%;
+}
+
+header .logo img {
+	width:50px;
+	vertical-align: top;
+}
+
+header .logo a {
+	color:#fff;
+	text-shadow: 10px 0px 10px #000000;
+	text-decoration: none;
+	line-height:50px;
+}
+
+header .menu {
+	display:inline;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+header .menu a {
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding:20px;
+}
+
+header .menu a:hover {
+	color:#ff8800;
+}
+
+/*section 1*/
+
+.img-principal{
+  background-color: #82c3a6;
+  text-align: center;
+  padding:40px 0 30px 0;
+}
+.banner{
+  width: 80%;
+  height: 50%;
+  box-shadow: 2px 2px 2px black;
+}
+/*section 2*/
+.img-secundario{
+  background-color: #d5c75f;
+}
+.img-izquierda,.img-derecha{
+  width: 75%;
+  height: 80%;
+  box-shadow: 2px 2px 2px black;
+}
+.contenedor{
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  color: black;
+  padding:50px 0 40px 0;
+}
+/*Translate y Rotate*/
+.img-derecha:hover{
+  transform: translate(20px,-5px);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+.img-izquierda:hover{
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+/*footer*/
+div[class*="columna"]{
+  display: flex;
+  flex-direction: column;
+  padding-left: 8%;
+  color: black;
+}
+footer{
+  background-color: #C6d5c5;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+/*media queries*/
+@media (max-width:600px) {
+  .contenido{
+    width: 100%;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+	height: 100%;
+  }
+  .menu{
+    padding-bottom: 20px;
+	display: inline;
+  }
+  .img-secundario .contenedor{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  div[class*="columna"]{
+    padding-left: 0;
+    padding-bottom: 5%;
+  }
+}
+
+/*animacion*/
+@keyframes slideIn {
+  0%{
+    margin-top:150%;
+  }
+  60%{
+    margin-top:-5%;
+  }
+  100%{
+    margin-top:0%;
+  }
+}
